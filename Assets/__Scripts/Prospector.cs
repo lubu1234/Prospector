@@ -162,6 +162,11 @@ public class Prospector : MonoBehaviour
 			//CardProspectors in the tableau have the state CardState.tableau
 			cp.transform.localPosition = new Vector3 (layout.multiplier.x * tSD.x, layout.multiplier.y * tSD.y, -tSD.layerID);
 
+
+			//********This line sets the SlotDef id and CardProspector slotDef to the SlotDef set in the current layout********\\
+			cp.layoutID = tSD.id;
+			cp.slotDef = tSD;
+
 			cp.state = CardState.tableau;
 			//CardProspectors in the tableau have the state CardState.tableau
 
