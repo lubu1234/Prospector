@@ -10,8 +10,8 @@ public class Scoreboard : MonoBehaviour
 	public GameObject prefabFloatingScore;
 
 	public bool ____________________;
-	[SerializeField]
 
+	[SerializeField]
 	private int _score = 0;
 	public string _scoreString;
 
@@ -21,7 +21,7 @@ public class Scoreboard : MonoBehaviour
 			return(_score);
 		}set{
 			_score = value;
-			_scoreString = Utils.AddCommasToNumber(_score);
+			scoreString = Utils.AddCommasToNumber(_score);
 		}
 	}
 

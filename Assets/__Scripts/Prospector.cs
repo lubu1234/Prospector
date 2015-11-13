@@ -384,9 +384,7 @@ public class Prospector : MonoBehaviour
 		case ScoreEvent.draw:
 		case ScoreEvent.gameWin:
 		case ScoreEvent.gameLoss:
-			chain = 0; //resets the score chain
-			score += scoreRun; //add scoreRun to total score
-			scoreRun = 0; //reset scoreRun
+
 
 			//Add fsRun to the _Scoreboard score
 			if(fsRun != null){
@@ -402,6 +400,11 @@ public class Prospector : MonoBehaviour
 				fsRun.fontSizes = new List<float>(new float[] {28,36,4});
 				fsRun = null; //Clear fsRun so it's created again
 			}
+
+			chain = 0; //resets the score chain
+			score += scoreRun; //add scoreRun to total score
+			scoreRun = 0; //reset scoreRun
+
 			break;
 
 		case ScoreEvent.mine: //Remove a mine card
